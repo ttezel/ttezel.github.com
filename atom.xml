@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://ttezel.github.com/atom.xml" rel="self"/>
   <link href="http://ttezel.github.com/"/>
-  <updated>2013-02-24T01:48:11-05:00</updated>
+  <updated>2013-02-24T01:52:21-05:00</updated>
   <id>http://ttezel.github.com/</id>
   <author>
     <name><![CDATA[Tolga Tezel]]></name>
@@ -14,19 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[REST API Specs in JSON]]></title>
-    <link href="http://ttezel.github.com/blog/2013/02/24/rest-api-specs-in-json/"/>
-    <updated>2013-02-24T01:45:00-05:00</updated>
-    <id>http://ttezel.github.com/blog/2013/02/24/rest-api-specs-in-json</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Stop writing REST API Clients.]]></title>
-    <link href="http://ttezel.github.com/blog/2013/02/23/unio-one-rest-api-for-all/"/>
+    <link href="http://ttezel.github.com/blog/2013/02/23/stop-writing-rest-api-clients/"/>
     <updated>2013-02-23T23:32:00-05:00</updated>
-    <id>http://ttezel.github.com/blog/2013/02/23/unio-one-rest-api-for-all</id>
+    <id>http://ttezel.github.com/blog/2013/02/23/stop-writing-rest-api-clients</id>
     <content type="html"><![CDATA[<blockquote><p>  Why do we keep writing REST API clients over and over again?</p>
 
 <p>  Facebook, Twitter, LinkedIn, Youtube, Instagram, Dropbox, Yahoo &#8230;</p>
@@ -200,7 +191,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>So I propose that we build a list of JSON documents describing as many REST APIs as possible, in order to save time implementing them over and over again. We can then import these specs as needed into a simple client like the one I wrote above, and start making HTTP requests without wasting time implementing yet another REST API client. I have started a JSON REST API spec page <a href="">Here</a>. I invite anyone and everyone to message me and collaborate to add more!</p>
+<p>So I propose that we build a list of JSON documents describing as many REST APIs as possible, in order to save time implementing them over and over again. We can then import these specs as needed into a simple client like the one I wrote above, and start making HTTP requests without wasting time implementing yet another REST API client. To help out and add more JSON API specs, fork and submit a pull request on <a href="http://github.com/ttezel/unio">Github</a>. I invite anyone and everyone to message me and collaborate to add more!</p>
 
 <p>Find me on: <a href="https://github.com/ttezel">Github</a> and <a href="https://twitter.com/tolga_tezel">Twitter</a>.</p>
 ]]></content>
