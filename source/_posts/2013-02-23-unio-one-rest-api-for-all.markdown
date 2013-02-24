@@ -73,7 +73,7 @@ We could do the same with the Twitter REST API - see the JSON below.
 }
 ```
 
-Since the APIs are so easily defined in JSON, I whipped up a quick client using `node.js`, published it on `npm` and put it on [Github](http://github.com/ttezel/unio). You can install it using `npm install unio`, and start making requests to the Facebook API (I will soon implement the Twitter API with it). You can also import JSON specs that look like the one above. Example usage below:
+Since the APIs are so easily defined in JSON, I whipped up a quick client using `node.js`, published it on `npm` and put it on [Github](http://github.com/ttezel/unio). You can install it using `npm install unio`, and start making requests to the Facebook and Twitter APIs. You can also import JSON specs that look like the one above. Example usage below:
 
 ```javascript
 var unio = require('unio')
