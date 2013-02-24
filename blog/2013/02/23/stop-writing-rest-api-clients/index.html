@@ -230,15 +230,31 @@
 <span class='line-number'>18</span>
 <span class='line-number'>19</span>
 <span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">unio</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;unio&#39;</span><span class="p">)</span>
 </span><span class='line'>
 </span><span class='line'><span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">q</span><span class="o">:</span> <span class="s1">&#39;coffee&#39;</span><span class="p">,</span> <span class="nx">access_token</span><span class="o">:</span> <span class="s1">&#39;FB_ACCESS_TOKEN&#39;</span> <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'><span class="c1">// use the facebook REST API and make a search query</span>
+</span><span class='line'><span class="c1">// use the Facebook REST API and make a search query</span>
 </span><span class='line'>
 </span><span class='line'><span class="nx">unio</span><span class="p">()</span>
 </span><span class='line'>    <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">&#39;fb&#39;</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;search&#39;</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">//...</span>
+</span><span class='line'>    <span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// use the Twitter REST API and post a tweet</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">unio</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">&#39;twitter&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;statuses/update&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">status</span><span class="o">:</span> <span class="s1">&#39;hello world&#39;</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>        <span class="c1">//...</span>
 </span><span class='line'>    <span class="p">})</span>
 </span><span class='line'>
@@ -247,7 +263,7 @@
 </span><span class='line'><span class="nx">unio</span><span class="p">()</span>
 </span><span class='line'>    <span class="p">.</span><span class="nx">spec</span><span class="p">(</span><span class="nx">jsonSpec</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">&#39;my-new-api&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/some/url&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;some/url&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>        <span class="c1">//...</span>
 </span><span class='line'>    <span class="p">})</span>
 </span></code></pre></td></tr></table></div></figure>
