@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://ttezel.github.com/atom.xml" rel="self"/>
   <link href="http://ttezel.github.com/"/>
-  <updated>2013-02-24T02:12:51-05:00</updated>
+  <updated>2013-02-24T02:16:04-05:00</updated>
   <id>http://ttezel.github.com/</id>
   <author>
     <name><![CDATA[Tolga Tezel]]></name>
@@ -148,6 +148,8 @@
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>The JSON snippet above defines the Twitter <code>/statuses/update</code> resource (for posting tweets). The rest of the API resources are similarly defined.</p>
 
 <p>Since the APIs are so easily defined in JSON, I whipped up a quick client using <code>node.js</code> that uses the JSON specs to implement a client that can talk to any REST API that can be defined in JSON like the Facebook and Twitter specs above. I published the client on <code>npm</code> and put it on <a href="http://github.com/ttezel/unio">Github</a>.</p>
 
