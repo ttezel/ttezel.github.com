@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://ttezel.github.com/atom.xml" rel="self"/>
   <link href="http://ttezel.github.com/"/>
-  <updated>2013-02-24T14:41:16-05:00</updated>
+  <updated>2013-02-24T14:45:58-05:00</updated>
   <id>http://ttezel.github.com/</id>
   <author>
     <name><![CDATA[Tolga Tezel]]></name>
@@ -216,7 +216,7 @@
 
 <p>The idea of describing a web service in a machine-readable format is not new. For example, there is <a href="http://en.wikipedia.org/wiki/Web_Services_Description_Language">Web Services Description Language</a>, which is an XML language used to describe the functionality offered by a web service.</p>
 
-<p>There is nothing inherently wrong with WSDL - it gets the job done and has been used widely in the past. I simply advocate that we publish JSON specs of REST APIs - this allows us to implement clients like <a href="http://github.com/ttezel/unio">unio</a>, making the time required to test, use and re-use REST services minimal.</p>
+<p>There is nothing inherently wrong with WSDL - it gets the job done and has been used widely in the past. I simply advocate that we use a simplified JSON spec like the one above to describe REST APIs - this allows us to implement clients like <a href="http://github.com/ttezel/unio">unio</a>, making the time required to test, use and re-use REST services minimal.</p>
 
 <p>So I propose that we build a list of JSON documents describing as many REST APIs as possible. We can then import these specs as needed into a simple client like the one I wrote above, and start making HTTP requests without wasting time implementing yet another REST API client. To help out and add more JSON API specs, fork and submit a pull request on the <a href="http://github.com/ttezel/unio">Github page for unio</a>. I invite anyone and everyone to message me and collaborate to add more!</p>
 
