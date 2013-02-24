@@ -80,7 +80,7 @@
 
 <p>After several years of using and writing REST APIs, it becomes redundant to you as a developer to implement a client in whatever language you use when the need arises to integrate a new service into the application.</p>
 
-<p>REST API best practices are pretty well known and it&#8217;s pretty straightforward to design one. You essentially define a list like <code>GET /user</code>, <code>POST /status</code>, &#8216;GET /search` and so on.</p>
+<p>REST API best practices are pretty well known and it&#8217;s pretty straightforward to design one. You essentially define a list like <code>GET /user</code>, <code>POST /status</code>, <code>GET /search</code> and so on.</p>
 
 <p>A REST API could be described in JSON. As an example, see the JSON below - describing part of the Facebook REST API.</p>
 
@@ -125,7 +125,9 @@
 
 <p>The Facebook REST API can be described as a list of resources, with the corresponding HTTP methods to use and the parameters allowed in the request.</p>
 
-<p>As can be seen in the JSON above, the <code>access_token</code> param is required, and the <code>fields</code> param is optional. Outlining the REST API in JSON allows one to perform application-level request validation - for example it would be trivial to write validation code to make sure that we don&#8217;t try to accidentally send off a request to the resource without the <code>access_token</code>, since we know it would fail.</p>
+<p>The snippet above describes the resource <code>/me</code>, which is located at the URL <code>https://graph.facebook.com/me</code>. The URL can be accessed using the HTTP verb <code>GET</code>, and it accepts two parameters - the optional <code>fields</code> param, and the required <code>access_token</code> param.</p>
+
+<p>Outlining the REST API in JSON allows one to perform application-level request validation - for example it would be trivial to write validation code to make sure that we don&#8217;t try to accidentally send off a request to the resource without the <code>access_token</code>, since we know it would fail.</p>
 
 <p>We could do the same with the Twitter REST API - see the JSON below.</p>
 
@@ -198,7 +200,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Since the APIs are so easily defined in JSON, I whipped up a quick client using <code>node.js</code>, published it on <code>npm</code> and put it on <a href="http://github.com/ttezel/unio">Github</a>. You can install it using <code>npm install unio</code>, and start making requests to the Facebook API (I will soon implement the Twitter API with it). You can also import JSON specs that look like the one above. Example usage below:</p>
+<p>Since the APIs are so easily defined in JSON, I whipped up a quick client using <code>node.js</code> that uses the JSON specs to implement a client that can talk to any REST API that can be defined in JSON like the Facebook and Twitter specs above. I published the client on <code>npm</code> and put it on <a href="http://github.com/ttezel/unio">Github</a>.</p>
+
+<p>You can install it using <code>npm install unio</code>, and start making requests to the Facebook API (I will soon implement the Twitter API with it). You can also import arbitrary JSON specs that look like the ones above. Example usage below:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -224,7 +228,7 @@
 </span><span class='line'>
 </span><span class='line'><span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">q</span><span class="o">:</span> <span class="s1">&#39;coffee&#39;</span><span class="p">,</span> <span class="nx">access_token</span><span class="o">:</span> <span class="s1">&#39;FB_ACCESS_TOKEN&#39;</span> <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'><span class="c1">// use the facebook REST API</span>
+</span><span class='line'><span class="c1">// use the facebook REST API and make a search query</span>
 </span><span class='line'>
 </span><span class='line'><span class="nx">unio</span><span class="p">()</span>
 </span><span class='line'>    <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">&#39;fb&#39;</span><span class="p">)</span>
@@ -232,7 +236,7 @@
 </span><span class='line'>        <span class="c1">//...</span>
 </span><span class='line'>    <span class="p">})</span>
 </span><span class='line'>
-</span><span class='line'><span class="c1">// import a new REST API definition (javascript object, or local fs path)</span>
+</span><span class='line'><span class="c1">// import a new REST API definition and query it</span>
 </span><span class='line'>
 </span><span class='line'><span class="nx">unio</span><span class="p">()</span>
 </span><span class='line'>    <span class="p">.</span><span class="nx">spec</span><span class="p">(</span><span class="nx">jsonSpec</span><span class="p">)</span>
@@ -243,7 +247,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>So I propose that we build a list of JSON documents describing as many REST APIs as possible, in order to save time implementing them over and over again. We can then import these specs as needed into a simple client like the one I wrote above, and start making HTTP requests without wasting time implementing yet another REST API client. To help out and add more JSON API specs, fork and submit a pull request on <a href="http://github.com/ttezel/unio">Github</a>. I invite anyone and everyone to message me and collaborate to add more!</p>
+<p>So I propose that we build a list of JSON documents describing as many REST APIs as possible. We can then import these specs as needed into a simple client like the one I wrote above, and start making HTTP requests without wasting time implementing yet another REST API client. To help out and add more JSON API specs, fork and submit a pull request on <a href="http://github.com/ttezel/unio">Github</a>. I invite anyone and everyone to message me and collaborate to add more!</p>
 
 <p>Find me on: <a href="https://github.com/ttezel">Github</a> and <a href="https://twitter.com/tolga_tezel">Twitter</a>.</p>
 </div>
