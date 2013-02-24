@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://ttezel.github.com/atom.xml" rel="self"/>
   <link href="http://ttezel.github.com/"/>
-  <updated>2013-02-24T01:52:21-05:00</updated>
+  <updated>2013-02-24T01:58:42-05:00</updated>
   <id>http://ttezel.github.com/</id>
   <author>
     <name><![CDATA[Tolga Tezel]]></name>
@@ -20,9 +20,10 @@
     <id>http://ttezel.github.com/blog/2013/02/23/stop-writing-rest-api-clients</id>
     <content type="html"><![CDATA[<blockquote><p>  Why do we keep writing REST API clients over and over again?</p>
 
-<p>  Facebook, Twitter, LinkedIn, Youtube, Instagram, Dropbox, Yahoo &#8230;</p>
+<pre><code>  Facebook, Twitter, LinkedIn, Youtube, Instagram, Dropbox, Yahoo ...
+</code></pre>
 
-<p>  This doesn&#8217;t scale.</p></blockquote>
+<p>  <strong>This doesn&#8217;t scale.</strong></p></blockquote>
 
 <hr />
 
