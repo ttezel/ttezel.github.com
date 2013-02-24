@@ -1,0 +1,40 @@
+.post{
+	h1.title, .entry-content{
+		color: black;
+		@media screen and (max-width: 800px){
+			margin-left: 0;
+		}
+	}
+	.meta{
+		top: 85px;
+		line-height: 2;
+		font-size: 14px;
+		color: #666;
+		width: 170px;
+		margin-bottom: 15px;
+		font-style: italic;
+		@media screen and (max-width: 800px){
+			margin-top: 5px;
+			position: static;
+			width: auto;
+		}
+		a{
+			@include link-colors($color-gray02, $color-gray01);
+			@include transition(0.3s);
+		}
+		.date, .tags, .comments{
+			position: relative;
+			&:before{
+				color: $color-gray03;
+				font: 1.3em $font-icon;
+				line-height: 1.6em;
+				position: absolute;
+				left: 0;
+			}
+			@media screen and (max-width: 800px){
+				@include inline-block;
+				margin-right: 30px;
+			}
+		}
+	}
+}
