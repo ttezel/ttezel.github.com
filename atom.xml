@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://ttezel.github.com/atom.xml" rel="self"/>
   <link href="http://ttezel.github.com/"/>
-  <updated>2013-02-25T10:55:50-05:00</updated>
+  <updated>2013-02-26T22:34:21-05:00</updated>
   <id>http://ttezel.github.com/</id>
   <author>
     <name><![CDATA[Tolga Tezel]]></name>
@@ -27,7 +27,7 @@
 
 <hr />
 
-<p>After several years of using and writing REST APIs, it becomes redundant to you as a developer to implement a client in whatever language you use when the need arises to integrate a new service into the application.</p>
+<p>After several years of using and writing REST APIs, it becomes redundant to implement a client in whatever language you use when the need arises to integrate a new service into the application.</p>
 
 <p>REST API best practices are pretty well known and it&#8217;s pretty straightforward to design one. You essentially define a list like <code>GET /user</code>, <code>POST /status</code>, <code>GET /search</code> and so on.</p>
 
